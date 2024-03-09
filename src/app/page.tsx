@@ -1,113 +1,165 @@
+"use client";
+
+import { AutoScrollCarousel } from "@/components/auto-scroll-carousel";
+import { MaxWidthWrapper } from "@/components/max-width-wrapper";
+import { MotionButton } from "@/components/motion-button";
+import { PageNavigation } from "@/components/page-navigation";
+import { Projects } from "@/components/projects";
+import { SectionHeading } from "@/components/section-heading";
+import { Title } from "@/components/title";
+import { CarouselItem } from "@/components/ui/carousel";
+import { MdOutlineFileDownload } from "react-icons/md";
+import { Separator } from "@/components/ui/separator";
+import { myGithubLink, reviews, services } from "@/config";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { FaGithub, FaLongArrowAltRight } from "react-icons/fa";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <MaxWidthWrapper className="pt-10 flex flex-col items-center">
+      <section className="max-w-[500px]">
+        <Title center>Hello there</Title>
+        <div className="flex gap-2 justify-center">
+          <Title>I&apos;m</Title>
+          <Title gradient>Ratul Hossain</Title>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div className="mt-5 text-muted-foreground text-lg text-center">
+          I&apos;m a&nbsp;
+          <span className="font-semibold">full stack web developer</span> . My
+          main focus is building websites using{" "}
+          <Link
+            target="_blank"
+            href="/react.dev"
+            className="font-semibold text-foreground underline"
+          >
+            React
+          </Link>{" "}
+          and{" "}
+          <Link
+            target="_blank"
+            href="https://nextjs.org/"
+            className="font-semibold text-foreground underline"
+          >
+            Next.js
+          </Link>
+        </div>
+        <div className="mt-6 flex gap-6 justify-center">
+          <MotionButton href="/contact" className="group" shadow>
+            Contact me
+            <FaLongArrowAltRight className="h-4 w-4 group-hover:translate-x-1 transition duration-300" />
+          </MotionButton>
+          <MotionButton href={myGithubLink} className="border-2" variant="outline">
+            <FaGithub className="h-4 w-4" />
+            GitHub
+          </MotionButton>
+        </div>
+      </section>
+      <Separator className="h-[80px] my-10" orientation="vertical" />
+      <section className="flex flex-col w-full items-center">
+        <SectionHeading>Latest Projects</SectionHeading>
+        <Projects activeTag="latest" />
+        <MotionButton
+          className="mt-10 group shadow-lg"
+          variant="default"
+          href="/projects"
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+          Explore All
+          <FaLongArrowAltRight className="h-4 w-4 group-hover:translate-x-1 transition duration-300" />
+        </MotionButton>
+      </section>
+      <section className="w-full mt-14 grid grid-cols-3 gap-x-4 gap-y-12">
+        <div className="flex flex-col md:mt-10 items-center md:items-start col-span-3 md:col-span-1 max-w-[400px] mx-auto">
+          <Title>My Awesome</Title>
+          <Title gradient>Services</Title>
+          <p className="mt-3 text-center md:text-start">
+            Elevate your online presence with our premium services. Let&apos;s
+            turn your ideas into reality.
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          <MotionButton shadow variant="gradient" className="mt-5 w-fit">
+            Download CV
+            <MdOutlineFileDownload className="group-hover:translate-y-1 transition duration-300" />
+          </MotionButton>
+        </div>
+        <div className="grid gap-10 sm:gap-0 sm:grid-cols-2 col-span-3 md:col-span-2">
+          {services.map((service) => (
+            <ServiceCard {...service} key={service.title} />
+          ))}
+        </div>
+      </section>
+      <section className="flex flex-col mt-14 w-full gap-5 items-center">
+        <SectionHeading>Reviews</SectionHeading>
+        <AutoScrollCarousel>
+          {reviews.map(({ name, username, image, comment }) => (
+            <CarouselItem
+              key={name}
+              className="mr-6 p-5 rounded-lg shadow-lg border dark:shadow-md dark:shadow-indigo-500 max-w-[300px] bg-background"
+            >
+              <div className="flex items-center gap-2">
+                <div className="relative h-9 w-9 rounded-full overflow-hidden">
+                  <Image
+                    src={image}
+                    alt={name}
+                    fill
+                    className="object-cover"
+                    placeholder="blur"
+                  />
+                </div>
+                <div>
+                  <h3 className="leading-4 font-medium">{name}</h3>
+                  <p className="leading-4 text-muted-foreground">{username}</p>
+                </div>
+              </div>
+              <p className="mt-3">{comment}</p>
+            </CarouselItem>
+          ))}
+        </AutoScrollCarousel>
+      </section>
+      <PageNavigation nextPageLabel="Projects" nextPageUrl="/projects" />
+    </MaxWidthWrapper>
   );
 }
+
+type Positions = {
+  x?: number;
+  y?: number;
+  left?: number;
+  right?: number;
+  top?: number;
+};
+
+const ServiceCard = ({
+  title,
+  description,
+  image,
+  className,
+}: {
+  title: string;
+  description: string;
+  image: string;
+  className?: string;
+}) => {
+  return (
+    <motion.div
+      className={cn(
+        "h-fit flex bg-background flex-col min-w-[250px] max-w-[250px] p-5 bg-background border items-center justify-center rounded-xl shadow-xl dark:shadow-lg dark:shadow-blue-500",
+        className
+      )}
+    >
+      <Image src={image} alt={`${title} Image`} height={40} width={40} />
+      <h4 className="font-medium mt-1">{title}</h4>
+      <p className="text-sm text-muted-foreground line-clamp-2">
+        {description}
+      </p>
+      <MotionButton
+        variant="outline"
+        size="sm"
+        className="mt-3 text-blue-500 hover:border-blue-500/50 hover:text-blue-500"
+      >
+        Read More
+      </MotionButton>
+    </motion.div>
+  );
+};
