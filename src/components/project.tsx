@@ -135,8 +135,16 @@ Project.Skeleton = function ProjectSkeleton() {
       <Skeleton className="w-full aspect-square" />
       <div className="px-2 py-3 space-y-2 w-full">
         <Skeleton className="w-[80%] h-5" />
-        <Skeleton className="w-[100%] h-4 mt-3" />
-        <Skeleton className="w-[50%] h-4 mt-1" />
+        <Skeleton className="w-[100%] h-3 mt-3" />
+        <Skeleton className="w-[50%] h-3 mt-1" />
+        <Separator className="my-3" />
+        <div className="flex items-center gap-3 h-4 w-full rounded-full">
+          {Array.from({ length: 4 }).map((_, index) => (
+            <Skeleton key={index} className="grow h-4"/>
+          ))}
+        </div>
+        <Skeleton className="h-8 w-full"/>
+        <Skeleton className="h-8 w-full mt-2"/>
       </div>
     </div>
   );

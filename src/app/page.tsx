@@ -8,18 +8,16 @@ import { Projects } from "@/components/projects";
 import { SectionHeading } from "@/components/section-heading";
 import { Title } from "@/components/title";
 import { CarouselItem } from "@/components/ui/carousel";
-import { MdOutlineFileDownload } from "react-icons/md";
 import { Separator } from "@/components/ui/separator";
 import { myGithubLink, reviews, services } from "@/config";
-import Image from "next/image";
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaLongArrowAltRight } from "react-icons/fa";
-import { cn } from "@/lib/utils";
-import { AnimatedLoader } from "@/components/animated-loader";
+import { MdOutlineFileDownload } from "react-icons/md";
 
 export default function Home() {
-
   return (
     <MaxWidthWrapper className="pt-10 flex flex-col items-center">
       <section className="max-w-[500px]">
@@ -53,7 +51,11 @@ export default function Home() {
             Contact me
             <FaLongArrowAltRight className="h-4 w-4 group-hover:translate-x-1 transition duration-300" />
           </MotionButton>
-          <MotionButton href={myGithubLink} className="border-2" variant="outline">
+          <MotionButton
+            href={myGithubLink}
+            className="border-2"
+            variant="outline"
+          >
             <FaGithub className="h-4 w-4" />
             GitHub
           </MotionButton>
