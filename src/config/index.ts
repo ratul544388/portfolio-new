@@ -17,18 +17,55 @@ import Review_3_image from "@/../public/images/reviews/user-3.jpg";
 import Review_4_image from "@/../public/images/reviews/user-4.jpg";
 import Review_5_image from "@/../public/images/reviews/user-5.jpg";
 
-import digitalMarketplaceImage from "@/../public/images/projects/digital-marketplace-1.png";
+import DigitalMarketplace_1 from "@/../public/images/projects/digital-marketplace/1.png";
+import DigitalMarketplace_2 from "@/../public/images/projects/digital-marketplace/2.png";
+import DigitalMarketplace_3 from "@/../public/images/projects/digital-marketplace/3.png";
+
+import Twitter_1 from "@/../public/images/projects/twitter/1.png";
+import Twitter_2 from "@/../public/images/projects/twitter/2.png";
+import Twitter_3 from "@/../public/images/projects/twitter/3.png";
+
+import Gym_1 from "@/../public/images/projects/gym/1.png";
+import Gym_2 from "@/../public/images/projects/gym/2.png";
+import Gym_3 from "@/../public/images/projects/gym/3.png";
+
+import BlogApp_1 from "@/../public/images/projects/blog-app/1.png";
+import BlogApp_2 from "@/../public/images/projects/blog-app/2.png";
+import BlogApp_3 from "@/../public/images/projects/blog-app/3.png";
+
+import Ecommerce_1 from "@/../public/images/projects/ecommerce/1.png";
+import Ecommerce_2 from "@/../public/images/projects/ecommerce/2.png";
+import Ecommerce_3 from "@/../public/images/projects/ecommerce/3.png";
+
+import FoodApp_1 from "@/../public/images/projects/food-app/1.png";
+import FoodApp_2 from "@/../public/images/projects/food-app/2.png";
+import FoodApp_3 from "@/../public/images/projects/food-app/3.png";
+
+import CarInfo_1 from "@/../public/images/projects/car-info/1.png";
+import CarInfo_2 from "@/../public/images/projects/car-info/2.png";
+import CarInfo_3 from "@/../public/images/projects/car-info/3.png";
+
+import Portfolio_1 from "@/../public/images/projects/portfolio/1.png";
+import Portfolio_2 from "@/../public/images/projects/portfolio/2.png";
+import Portfolio_3 from "@/../public/images/projects/portfolio/3.png";
+
+import DoctorBooking_1 from "@/../public/images/projects/doctor-booking/1.png";
+import DoctorBooking_2 from "@/../public/images/projects/doctor-booking/2.png";
+import DoctorBooking_3 from "@/../public/images/projects/doctor-booking/3.png";
+
+import MiniProjects_1 from "@/../public/images/projects/mini-projects/1.png";
+import MiniProjects_2 from "@/../public/images/projects/mini-projects/2.png";
+import MiniProjects_3 from "@/../public/images/projects/mini-projects/3.png";
 
 export const myTwitterLink = "https://twitter.com/Ratul2582";
 export const myGithubLink = "https://github.com/ratul544388";
 export const MyLinkdinLink =
   "https://www.linkedin.com/in/ratul-islam-a0774521a";
 export const myFacebookLink = "https://www.facebook.com/ratul544388";
-
 export const myEmail = "ratulislam544388@gmail.com";
 export const myAddress = "Keranigonj Dhaka 1310, Bangladesh";
 export const myPhone = "+8801815555105";
-export const myFiverrLink = "https://www.fiverr.com/ratul544"
+export const myFiverrLink = "https://www.fiverr.com/ratul544";
 
 export const navLinks = [
   {
@@ -82,11 +119,7 @@ export const projects = [
     name: "Digital Marketplace",
     description:
       "Facilitating transactions of premium digital assets, ensuring quality and security for buyers and sellers alike.",
-    images: [
-      digitalMarketplaceImage,
-      digitalMarketplaceImage,
-      digitalMarketplaceImage,
-    ],
+    images: [DigitalMarketplace_1, DigitalMarketplace_2, DigitalMarketplace_3],
     tags: ["ecommerce", "latest"],
     tech: ["Next.js", "Mongodb", "Prisma", "Stripe"],
     githubLink: "https://github.com/ratul544388/digital-marketplace",
@@ -96,11 +129,7 @@ export const projects = [
     name: "Gym Admin Management",
     description:
       "Sheamlessly manage gym Enrollment, renewals and Membership Plans, Utilize Tables with Versatile Filters for member menagement",
-    images: [
-      digitalMarketplaceImage,
-      digitalMarketplaceImage,
-      digitalMarketplaceImage,
-    ],
+    images: [Gym_1, Gym_2, Gym_3],
     tags: [],
     tech: ["React", "Next.js", "Mongodb", "Prisma"],
     githubLink: "https://github.com/ratul544388/gym",
@@ -110,11 +139,7 @@ export const projects = [
     name: "Twitter clone",
     description:
       "Our platform mirrors Twitter's UI and functionality, including blue badge subscriptions, ensuring a seamless user experience.",
-    images: [
-      digitalMarketplaceImage,
-      digitalMarketplaceImage,
-      digitalMarketplaceImage,
-    ],
+    images: [Twitter_1, Twitter_2, Twitter_3],
     tags: ["social media"],
     tech: ["Next.js", "Mongodb", "Prisma", "Stripe", "TanstackQuery"],
     githubLink: "https://github.com/ratul544388/Twitter-clone-next-14",
@@ -124,11 +149,7 @@ export const projects = [
     name: "Food Delivery App",
     description:
       "Streamlined online platform offering seamless food delivery services, ensuring efficiency and convenience for users and restaurants alike.",
-    images: [
-      digitalMarketplaceImage,
-      digitalMarketplaceImage,
-      digitalMarketplaceImage,
-    ],
+    images: [FoodApp_1, FoodApp_2, FoodApp_3],
     tags: ["ecommerce"],
     tech: ["Next.js", "Prisma", "Stripe", "TanstackQeury"],
     githubLink: "https://github.com/ratul544388/quick-bite",
@@ -138,11 +159,7 @@ export const projects = [
     name: "Portfolio Website",
     description:
       "Dynamic portfolio website featuring animated elements powered by Framer Motion, showcasing creativity and innovation in design and development",
-    images: [
-      digitalMarketplaceImage,
-      digitalMarketplaceImage,
-      digitalMarketplaceImage,
-    ],
+    images: [Portfolio_1, Portfolio_2, Portfolio_3],
     tags: ["portfolio", "latest"],
     tech: ["React", "Next.js", "Framer motion", "ShadcnUI"],
     githubLink: "https://github.com/ratul544388/car-hub",
@@ -153,11 +170,7 @@ export const projects = [
     name: "Shopping App",
     description:
       "Shop for trendy fashion clothing online with secure payment processing through Stripe, ensuring a smooth and stylish shopping experience.",
-    images: [
-      digitalMarketplaceImage,
-      digitalMarketplaceImage,
-      digitalMarketplaceImage,
-    ],
+    images: [Ecommerce_1, Ecommerce_2, Ecommerce_3],
     tags: ["ecommerce", "latest"],
     tech: ["Next.js", "Mongodb", "Prisma", "Stripe"],
     githubLink: "https://github.com/ratul544388/ecommerce",
@@ -167,11 +180,7 @@ export const projects = [
     name: "Blog app",
     description:
       "Publish your blog and engage with the community by voting and commenting on other blogs, fostering an interactive and supportive environment.",
-    images: [
-      digitalMarketplaceImage,
-      digitalMarketplaceImage,
-      digitalMarketplaceImage,
-    ],
+    images: [BlogApp_1, BlogApp_2, BlogApp_3],
     tags: ["social media"],
     tech: ["React", "Next.js", "Mongodb", "TanstackQuery"],
     githubLink: "https://github.com/ratul544388/blog-app",
@@ -181,11 +190,7 @@ export const projects = [
     name: "Doctor Booking App",
     description:
       "Easily schedule appointments with your preferred doctors online, ensuring convenient access to quality healthcare services.",
-    images: [
-      digitalMarketplaceImage,
-      digitalMarketplaceImage,
-      digitalMarketplaceImage,
-    ],
+    images: [DoctorBooking_1, DoctorBooking_2, DoctorBooking_3],
     tags: ["booking"],
     tech: ["Next.js", "Mongodb", "Prisma", "Framer motion"],
     githubLink: "https://github.com/ratul544388/Doctor-Booking-App",
@@ -195,11 +200,7 @@ export const projects = [
     name: "Mini Projects & games",
     description:
       "Enjoy a variety of online games and engage in other activities, offering entertainment and fun for users of all ages.",
-    images: [
-      digitalMarketplaceImage,
-      digitalMarketplaceImage,
-      digitalMarketplaceImage,
-    ],
+    images: [MiniProjects_1, MiniProjects_2, MiniProjects_3],
     tags: [],
     tech: ["TypeScript", "Next.js", "React", "Framer motion"],
     githubLink: "https://github.com/ratul544388/mini-projects",
@@ -209,11 +210,7 @@ export const projects = [
     name: "Car Booking App",
     description:
       "Search and Filters Efficiently search and filter through a comprehensive collection of brand cars online, leveraging the capabilities of two integrated APIs.",
-    images: [
-      digitalMarketplaceImage,
-      digitalMarketplaceImage,
-      digitalMarketplaceImage,
-    ],
+    images: [CarInfo_1, CarInfo_2, CarInfo_3],
     tags: ["booking"],
     tech: ["TypeScript", "Next.js", "React", "ShadcnUI"],
     githubLink: "https://github.com/ratul544388/car-hub",
@@ -223,7 +220,7 @@ export const projects = [
 ];
 
 export const tags = [
-  "all projects",
+  "all",
   "latest",
   "ecommerce",
   "social media",

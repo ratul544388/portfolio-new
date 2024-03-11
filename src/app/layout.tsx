@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={cn(inter.className, "flex flex-col bg-secondary/40")}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >

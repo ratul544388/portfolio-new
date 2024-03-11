@@ -12,7 +12,7 @@ interface ProjectsProps {
 }
 
 export const Projects = ({
-  activeTag = "all projects",
+  activeTag = "all",
   className,
 }: ProjectsProps) => {
   const [isMounted, setIsMounted] = useState(false);

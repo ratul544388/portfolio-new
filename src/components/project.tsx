@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Separator } from "./ui/separator";
 import { Button, buttonVariants } from "./ui/button";
+import { motion } from "framer-motion";
 import { SiGoogleearth } from "react-icons/si";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
@@ -35,8 +36,10 @@ export const Project = ({
   githubLink,
   deployedLink,
 }: ProjectProps) => {
-  const [api, setApi] = useState<CarouselApi>();
+  const [api] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+
+  const MotionImage = motion(Image);
 
   useEffect(() => {
     if (!api) {
@@ -50,7 +53,10 @@ export const Project = ({
   }, [api]);
 
   return (
-    <div className="relative bg-background w-full group text-sm rounded-lg overflow-hidden border transition-all duration-200 shadow_sm">
+    <motion.div
+      whileHover="hover"
+      className="relative bg-background w-full group text-sm rounded-lg overflow-hidden border transition-all duration-200 shadow_sm"
+    >
       <Carousel className="w-full">
         <CarouselContent>
           {images.map((image, index) => (
@@ -58,11 +64,19 @@ export const Project = ({
               key={index}
               className="relative w-full aspect-square max-h-[200px] overflow-hidden"
             >
-              <Image
-                src={images[0]}
+              <MotionImage
+                variants={{
+                  initial: {
+                    scale: 1,
+                  },
+                  hover: {
+                    scale: 1.03,
+                  },
+                }}
+                src={image}
                 alt={name}
                 fill
-                className="group-hover:scale-105 transition object-cover"
+                className="object-cover"
                 placeholder="blur"
               />
             </CarouselItem>
@@ -102,7 +116,7 @@ export const Project = ({
             <SiGoogleearth className="h-4 w-4" />
           </Link>
           <Link
-            href={deployedLink}
+            href={githubLink}
             className={cn(buttonVariants({ variant: "outline" }), "w-full")}
             target="_blank"
           >
@@ -111,7 +125,7 @@ export const Project = ({
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -16,8 +16,10 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaGithub, FaLongArrowAltRight } from "react-icons/fa";
 import { cn } from "@/lib/utils";
+import { AnimatedLoader } from "@/components/animated-loader";
 
 export default function Home() {
+
   return (
     <MaxWidthWrapper className="pt-10 flex flex-col items-center">
       <section className="max-w-[500px]">
@@ -32,7 +34,7 @@ export default function Home() {
           main focus is building websites using{" "}
           <Link
             target="_blank"
-            href="/react.dev"
+            href="https://react.dev"
             className="font-semibold text-foreground underline"
           >
             React
