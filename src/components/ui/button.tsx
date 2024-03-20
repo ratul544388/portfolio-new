@@ -21,10 +21,11 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         gradient: "gradient text-white",
         default:
-          "bg-neutral-800 hover:bg-neutral-800/90 dark:bg-slate-100 dark:hover:bg-slate-100/90 text-slate-100 dark:text-neutral-800",
+          "bg-neutral-800 hover:bg-neutral-800/90 dark:text-foreground text-slate-100",
       },
       size: {
         default: "h-9 px-4 py-2",
+        xs: "h-8 min-w-8",
         sm: "h-8 px-3 text-xs",
         lg: "h-10 rounded-md px-8",
         icon: "h-9 w-9",

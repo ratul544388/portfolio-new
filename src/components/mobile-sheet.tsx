@@ -28,7 +28,7 @@ export const MobileSheet = () => {
           onCloseSheet={onToggle}
           className="mt-10 pb-6"
         />
-        <SocialIcons onCloseSheet={onToggle} className="pl-3"/>
+        <SocialIcons onCloseSheet={onToggle} className="pl-3" />
       </motion.div>
       <motion.span
         onClick={onToggle}
@@ -38,7 +38,7 @@ export const MobileSheet = () => {
         }}
         initial="closed"
         animate={animate}
-        className="fixed z-20 top-[60px] inset-0 bg-neutral-900/10 backdrop-blur-sm"
+        className="fixed h-[100vh] z-[30] top-[60px] inset-0 bg-neutral-900/70"
       />
     </div>
   );

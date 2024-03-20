@@ -1,7 +1,14 @@
 "use client";
 
+import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
-import { Skeleton } from "./ui/skeleton";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { FaGithub } from "react-icons/fa";
+import { SiGoogleearth } from "react-icons/si";
+import { HorizontalScrollNavigation } from "./horizontal-scroll-navigation";
+import { buttonVariants } from "./ui/button";
 import {
   Carousel,
   CarouselApi,
@@ -10,14 +17,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
-import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
 import { Separator } from "./ui/separator";
-import { Button, buttonVariants } from "./ui/button";
-import { motion } from "framer-motion";
-import { SiGoogleearth } from "react-icons/si";
-import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
+import { Skeleton } from "./ui/skeleton";
 
 interface ProjectProps {
   name: string;
@@ -96,17 +97,8 @@ export const Project = ({
           {description}
         </p>
         <Separator className="my-3" />
-        <div className="flex gap-x-3 gap-y-2 flex-wrap">
-          {tech.map((item) => (
-            <div
-              key={item}
-              className="font-medium text-xs border rounded-full px-3 py-0.5 bg-secondary text-blue-500"
-            >
-              {item}
-            </div>
-          ))}
-        </div>
-        <div className="space-y-2.5 w-full mt-5">
+        <HorizontalScrollNavigation items={tech} isSmall />
+        <div className="space-y-2.5 w-full mt-3">
           <Link
             href={deployedLink}
             className={cn(buttonVariants({ variant: "outline" }), "w-full")}
@@ -132,19 +124,19 @@ export const Project = ({
 Project.Skeleton = function ProjectSkeleton() {
   return (
     <div className="w-full border rounded-lg overflow-hidden">
-      <Skeleton className="w-full aspect-square" />
-      <div className="px-2 py-3 space-y-2 w-full">
+      <Skeleton className="w-full h-[200px]" />
+      <div className="px-2 py-3 flex flex-col w-full">
         <Skeleton className="w-[80%] h-5" />
         <Skeleton className="w-[100%] h-3 mt-3" />
         <Skeleton className="w-[50%] h-3 mt-1" />
-        <Separator className="my-3" />
-        <div className="flex items-center gap-3 h-4 w-full rounded-full">
+        <Separator className="mt-3" />
+        <div className="flex items-center gap-3 mt-3 h-6 w-full rounded-full overflow-hidden">
           {Array.from({ length: 4 }).map((_, index) => (
-            <Skeleton key={index} className="grow h-4"/>
+            <Skeleton key={index} className="min-w-20 h-full" />
           ))}
         </div>
-        <Skeleton className="h-8 w-full"/>
-        <Skeleton className="h-8 w-full mt-2"/>
+        <Skeleton className="h-8 w-full mt-3" />
+        <Skeleton className="h-8 w-full mt-2" />
       </div>
     </div>
   );

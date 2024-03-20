@@ -16,7 +16,7 @@ export const AutoScrollCarousel = ({ children }: AutoScrollCarouselProps) => {
   const onMouseLeave = useCallback(() => {
     const autoScroll = api?.plugins().autoScroll;
     if (autoScroll && typeof autoScroll.play === "function") {
-      autoScroll?.play();
+      autoScroll.play();
     }
   }, [api]);
 

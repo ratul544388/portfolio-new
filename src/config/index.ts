@@ -57,6 +57,18 @@ import MiniProjects_1 from "@/../public/images/projects/mini-projects/1.png";
 import MiniProjects_2 from "@/../public/images/projects/mini-projects/2.png";
 import MiniProjects_3 from "@/../public/images/projects/mini-projects/3.png";
 
+import CalmLandingPage_1 from "@/../public/images/projects/calm-landing-page/1.png";
+import CalmLandingPage_2 from "@/../public/images/projects/calm-landing-page/2.png";
+import CalmLandingPage_3 from "@/../public/images/projects/calm-landing-page/3.png";
+
+import UniversityLandingPage_1 from "@/../public/images/projects/university-landing-page/1.png";
+import UniversityLandingPage_2 from "@/../public/images/projects/university-landing-page/2.png";
+import UniversityLandingPage_3 from "@/../public/images/projects/university-landing-page/3.png";
+
+import GrassRootLandingPage_1 from "@/../public/images/projects/grass-root-landing-page/1.png";
+import GrassRootLandingPage_2 from "@/../public/images/projects/grass-root-landing-page/2.png";
+import GrassRootLandingPage_3 from "@/../public/images/projects/grass-root-landing-page/3.png";
+
 export const myTwitterLink = "https://twitter.com/Ratul2582";
 export const myGithubLink = "https://github.com/ratul544388";
 export const MyLinkdinLink =
@@ -121,7 +133,16 @@ export const projects = [
       "Facilitating transactions of premium digital assets, ensuring quality and security for buyers and sellers alike.",
     images: [DigitalMarketplace_1, DigitalMarketplace_2, DigitalMarketplace_3],
     tags: ["ecommerce", "latest"],
-    tech: ["Next.js", "Mongodb", "Prisma", "Stripe"],
+    tech: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Clerk",
+      "ShadcnUI",
+      "Mongodb",
+      "Prisma",
+      "Stripe",
+    ],
     githubLink: "https://github.com/ratul544388/digital-marketplace",
     deployedLink: "https://digital-marketplace-rouge.vercel.app",
   },
@@ -131,7 +152,15 @@ export const projects = [
       "Sheamlessly manage gym Enrollment, renewals and Membership Plans, Utilize Tables with Versatile Filters for member menagement",
     images: [Gym_1, Gym_2, Gym_3],
     tags: [],
-    tech: ["React", "Next.js", "Mongodb", "Prisma"],
+    tech: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Clerk",
+      "ShadcnUI",
+      "Mongodb",
+      "Prisma",
+    ],
     githubLink: "https://github.com/ratul544388/gym",
     deployedLink: "https://gym-phi-one.vercel.app/",
   },
@@ -141,7 +170,17 @@ export const projects = [
       "Our platform mirrors Twitter's UI and functionality, including blue badge subscriptions, ensuring a seamless user experience.",
     images: [Twitter_1, Twitter_2, Twitter_3],
     tags: ["social media"],
-    tech: ["Next.js", "Mongodb", "Prisma", "Stripe", "TanstackQuery"],
+    tech: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Clerk",
+      "ShadcnUI",
+      "Mongodb",
+      "Prisma",
+      "Stripe",
+      "Tanstack Query",
+    ],
     githubLink: "https://github.com/ratul544388/Twitter-clone-next-14",
     deployedLink: "https://twitter-clone-next-14.vercel.app",
   },
@@ -151,7 +190,17 @@ export const projects = [
       "Streamlined online platform offering seamless food delivery services, ensuring efficiency and convenience for users and restaurants alike.",
     images: [FoodApp_1, FoodApp_2, FoodApp_3],
     tags: ["ecommerce"],
-    tech: ["Next.js", "Prisma", "Stripe", "TanstackQeury"],
+    tech: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Clerk",
+      "ShadcnUI",
+      "Mongodb",
+      "Prisma",
+      "Stripe",
+      "Tanstack Query",
+    ],
     githubLink: "https://github.com/ratul544388/quick-bite",
     deployedLink: "https://quick-bite-eosin.vercel.app",
   },
@@ -161,7 +210,7 @@ export const projects = [
       "Dynamic portfolio website featuring animated elements powered by Framer Motion, showcasing creativity and innovation in design and development",
     images: [Portfolio_1, Portfolio_2, Portfolio_3],
     tags: ["portfolio", "latest"],
-    tech: ["React", "Next.js", "Framer motion", "ShadcnUI"],
+    tech: ["React", "Next.js", "TypeScript", "ShadcnUI"],
     githubLink: "https://github.com/ratul544388/car-hub",
     deployedLink:
       "https://portfolio-two-sepia-49.vercel.app/https://car-hub-dusky-eta.vercel.app",
@@ -172,7 +221,16 @@ export const projects = [
       "Shop for trendy fashion clothing online with secure payment processing through Stripe, ensuring a smooth and stylish shopping experience.",
     images: [Ecommerce_1, Ecommerce_2, Ecommerce_3],
     tags: ["ecommerce", "latest"],
-    tech: ["Next.js", "Mongodb", "Prisma", "Stripe"],
+    tech: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Clerk",
+      "ShadcnUI",
+      "Mongodb",
+      "Prisma",
+      "Stripe",
+    ],
     githubLink: "https://github.com/ratul544388/ecommerce",
     deployedLink: "https://ecommerce-coral-delta.vercel.app",
   },
@@ -182,7 +240,17 @@ export const projects = [
       "Publish your blog and engage with the community by voting and commenting on other blogs, fostering an interactive and supportive environment.",
     images: [BlogApp_1, BlogApp_2, BlogApp_3],
     tags: ["social media"],
-    tech: ["React", "Next.js", "Mongodb", "TanstackQuery"],
+    tech: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Clerk",
+      "ShadcnUI",
+      "Mongodb",
+      "Prisma",
+      "Stripe",
+      "Tanstack Query",
+    ],
     githubLink: "https://github.com/ratul544388/blog-app",
     deployedLink: "https://blog-app-chi-drab.vercel.app",
   },
@@ -192,7 +260,16 @@ export const projects = [
       "Easily schedule appointments with your preferred doctors online, ensuring convenient access to quality healthcare services.",
     images: [DoctorBooking_1, DoctorBooking_2, DoctorBooking_3],
     tags: ["booking"],
-    tech: ["Next.js", "Mongodb", "Prisma", "Framer motion"],
+    tech: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Clerk",
+      "ShadcnUI",
+      "Mongodb",
+      "Prisma",
+      "Stripe",
+    ],
     githubLink: "https://github.com/ratul544388/Doctor-Booking-App",
     deployedLink: "https://doctor-booking-app.vercel.app",
   },
@@ -217,15 +294,52 @@ export const projects = [
     deployedLink:
       "https://portfolio-two-sepia-49.vercel.app/https://car-hub-dusky-eta.vercel.app",
   },
+  {
+    name: "Calm Landing Page",
+    description: "Beautiful landing page with Next js and Framer motion",
+    images: [CalmLandingPage_1, CalmLandingPage_2, CalmLandingPage_3],
+    tags: ["landing page", "latest"],
+    tech: ["TypeScript", "Next.js", "React", "Framer motion"],
+    githubLink: "https://github.com/ratul544388/calm-landing-page",
+    deployedLink: "https://calm-landing-page.vercel.app/",
+  },
+  {
+    name: "University Landing Page",
+    description: "Beautiful landing page with Next js and Framer motion",
+    images: [
+      UniversityLandingPage_1,
+      UniversityLandingPage_2,
+      UniversityLandingPage_3,
+    ],
+    tags: ["landing page"],
+    tech: ["TypeScript", "Next.js", "React", "Framer motion"],
+    githubLink: "https://github.com/ratul544388/university-landing-page",
+    deployedLink: "https://university-landing-page.vercel.app/",
+  },
+  {
+    name: "Grass Root Landing Page",
+    description: "Beautiful landing page with Next js and Framer motion",
+    images: [
+      GrassRootLandingPage_1,
+      GrassRootLandingPage_2,
+      GrassRootLandingPage_3,
+    ],
+    tags: ["landing page"],
+    tech: ["TypeScript", "Next.js", "React", "Framer motion"],
+    githubLink:
+      "https://github.com/ratul544388/grass-root-farmers-landing-page",
+    deployedLink: "https://grass-root-farmers-landing-page.vercel.app/",
+  },
 ];
 
 export const tags = [
-  "all",
+  "all projects",
   "latest",
   "ecommerce",
   "social media",
   "booking",
   "portfolio",
+  "landing page",
 ] as const;
 
 export const skills = [

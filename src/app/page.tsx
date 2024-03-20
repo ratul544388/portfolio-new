@@ -1,6 +1,7 @@
 "use client";
 
 import { AutoScrollCarousel } from "@/components/auto-scroll-carousel";
+import { Loader } from "@/components/loader";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 import { MotionButton } from "@/components/motion-button";
 import { PageNavigation } from "@/components/page-navigation";
@@ -64,7 +65,7 @@ export default function Home() {
       <Separator className="h-[80px] my-10" orientation="vertical" />
       <section className="flex flex-col w-full items-center">
         <SectionHeading>Latest Projects</SectionHeading>
-        <Projects activeTag="latest" />
+        <Projects activeTag="latest" className="mt-10" />
         <MotionButton
           className="mt-10 group shadow-lg"
           variant="default"
@@ -126,14 +127,6 @@ export default function Home() {
   );
 }
 
-type Positions = {
-  x?: number;
-  y?: number;
-  left?: number;
-  right?: number;
-  top?: number;
-};
-
 const ServiceCard = ({
   title,
   description,
@@ -148,7 +141,7 @@ const ServiceCard = ({
   return (
     <motion.div
       className={cn(
-        "h-fit flex bg-background flex-col min-w-[250px] max-w-[250px] p-5 bg-background border items-center justify-center rounded-xl shadow-xl dark:shadow-lg dark:shadow-blue-500",
+        "h-fit flex flex-col min-w-[250px] max-w-[250px] p-5 bg-background border items-center justify-center rounded-xl shadow-xl dark:shadow-lg dark:shadow-blue-500",
         className
       )}
     >

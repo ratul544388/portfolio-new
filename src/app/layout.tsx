@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, "flex flex-col bg-secondary/40")}>
+      <body className={cn(inter.className, "")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -28,9 +28,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="flex-1">
-            <div className="min-h-screen pt-[85px] h-full">{children}</div>
-          </main>
+          <main className="min-h-screen h-full pt-5">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

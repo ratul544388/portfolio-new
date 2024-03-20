@@ -1,13 +1,15 @@
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
-import { Project } from "@/components/project";
 import { ProjectsSkeleton } from "@/components/skeletons/projects-skeleton";
 import { Skeleton } from "@/components/ui/skeleton";
-import React from "react";
 
 const Loading = () => {
   return (
-    <MaxWidthWrapper className="max-w-[900px] flex flex-col gap-10 items-center">
-      <Skeleton className="w-full max-w-[500px] h-10 rounded-full" />
+    <MaxWidthWrapper className="flex flex-col gap-3 items-center">
+      <div className="flex w-full gap-3 overflow-hidden">
+        {Array.from({ length: 8 }).map((_, index) => (
+          <Skeleton key={index} className="min-w-24 h-8" />
+        ))}
+      </div>
       <ProjectsSkeleton />
     </MaxWidthWrapper>
   );

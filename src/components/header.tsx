@@ -9,7 +9,7 @@ import { ThemeToggler } from "./theme-toggler";
 
 export const Header = () => {
   return (
-    <header className="fixed bg-background top-0 inset-x-0 border-b h-[60px] z-50">
+    <header className="bg-background dark:bg-background/20 dark:border backdrop-blur-md py-4 sticky top-0 inset-x-0 z-50 shadow-sm">
       <MaxWidthWrapper className="h-full flex items-center justify-between">
         <div className="flex items-center gap-4">
           <Logo />
