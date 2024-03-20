@@ -405,7 +405,7 @@ export const skills = [
     skillPercentage: 100,
   },
   {
-    label: "MongoDB",
+    label: "Prisma",
     image: "/images/skills/prisma.png",
     backend: true,
     skillPercentage: 100,
