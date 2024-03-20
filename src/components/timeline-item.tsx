@@ -55,6 +55,7 @@ export const TimelineItem = ({
               opacity: 1,
             },
           }}
+          transition={{ duration: 0.5 }}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.2 }}
@@ -72,7 +73,7 @@ export const TimelineItem = ({
           />
           <span
             className={cn(
-              "absolute bg-background h-4 w-4 rotate-45 right-[100%] md:right-0 translate-x-1/2",
+              "absolute bg-background border border-t-0 border-r-0 h-4 w-4 rotate-45 right-[100%] md:right-0 translate-x-1/2",
               even && "md:right-[100%]"
             )}
           />
